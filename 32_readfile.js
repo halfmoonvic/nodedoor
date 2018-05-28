@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('./32_readfile.js', 'utf8', (err, data) => {
+    fs.readFile('./32_readfile.js', 'utf8', (err, data) => {
     if (err) throw err;
 
     console.log(data);
