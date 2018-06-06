@@ -6,9 +6,10 @@ const stat = promisify(fs.stat)
 const readdir = promisify(fs.readdir)
 const config = require('../config/defaultConfig')
 
-const mime = require('../helper/mime')
-const compress = require('../helper/compress')
-const range = require('../helper/range')
+const mime = require('./mime')
+const compress = require('./compress')
+const range = require('./range')
+const isFresh = require('./cache.js')
 
 const tplPath = path.join(__dirname, '../template/dir.tpl')
 const source = fs.readFileSync(tplPath)
@@ -23,6 +24,13 @@ module.exports = async (req, res, filePath) => {
       const contentType = mime(filePath)
       res.setHeader('Content-Type', contentType)
       res.statusCode = 200
+
+      // 缓存
+      if (isFresh(stats, req, res)) {
+        res.statusCode = 304
+        res.end()
+        return
+      }
 
       // range 请求
       let rs
