@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "gulp-watch": "gulp watch",
-    "babel": "babel src/script -d build/script"
+    "babel": "babel src/script -d build/script",
+    "webpack": "rm -rf build && webpack"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,18 @@
   },
   "homepage": "https://github.com/halfmoonvic/nodedoor#readme",
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "del": "^3.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "gulp": "^3.9.1",
-    "gulp-less": "^3.5.0"
+    "gulp-less": "^3.5.0",
+    "less-loader": "^4.1.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
