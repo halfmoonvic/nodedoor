@@ -1,10 +1,7 @@
-@base: #333;
+@width: 500px;
 
-.row {
-  color: @base;
-  transform: translateY(30px);
+.container {
   border: 1px solid red;
-  &:hover {
-    color: lighten(@base, 50%);
-  }
+  width: @width;
+  height: 300px;
 }
