@@ -1,0 +1,23 @@
+{
+  "name": "nodedoor",
+  "version": "1.0.0",
+  "description": "爬虫",
+  "main": "main.js",
+  "dependencies": {
+    "istanbul": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halfmoonvic/nodedoor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halfmoonvic/nodedoor/issues"
+  },
+  "homepage": "https://github.com/halfmoonvic/nodedoor#readme"
+}
