@@ -9,10 +9,17 @@ module.exports = {
   extends: 'eslint:recommended',
   rules: {
     // allow async-await
-    'space-before-function-paren': ["warn", "never"],
+    'space-before-function-paren': [
+      1,
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
     'generator-star-spacing': 'off',
     'spaced-comment': 'off',
-    'indent': ['warn', 2],
+    'indent': ['warn', 4],
     'no-unused-vars': 'warn',
     'semi': ['warn', 'never'],
     // 不允许多个空行

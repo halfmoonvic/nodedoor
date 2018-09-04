@@ -4,7 +4,8 @@
   "description": "爬虫",
   "main": "main.js",
   "dependencies": {
-    "istanbul": "^0.4.5"
+    "istanbul": "^0.4.5",
+    "puppeteer": "^1.7.0"
   },
   "devDependencies": {},
   "scripts": {
