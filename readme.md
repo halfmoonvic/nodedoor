@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/halfmoonvic/nodedoor.svg?branch=test)](https://travis-ci.org/halfmoonvic/nodedoor)
+
 阻塞非阻塞 I/O （很像是 同步异步）
 阻塞： I/O 时进程休眠等等 I/O 完成后进行下一步。
 非阻塞：I/O 时函数立即返回，进程不等待 I/O 完成
