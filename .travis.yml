@@ -5,5 +5,9 @@ node_js:
 brancher:
   only:
     - 'test'
+install:
+  - 'npm install'
+  - 'npm install -g codecov'
 script:
   - 'npm run cover'
+  - codecov
